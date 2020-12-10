@@ -1,0 +1,7 @@
+// Sprites Map import
+{{#each path as |value key|}}
+	@import "{{value.path}}/{{@root.prefix}}{{value.collection}}.{{@root.exe}}";
+{{/each}}
+
+// Sprites Map List
+$svg_map_list: ( {{#each path as |value key|}}${{@root.prefix}}{{value.collection}}, {{/each}} );

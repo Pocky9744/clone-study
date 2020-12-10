@@ -1,0 +1,34 @@
+{
+  "name": "m.recruit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer": "9.4.8",
+    "browser-sync": "2.26.3",
+    "del": "3.0.0",
+    "gulp": "4.0.2",
+    "gulp-clean-css": "3.10.0",
+    "gulp-compile-handlebars": "0.6.1",
+    "gulp-if": "2.0.2",
+    "gulp-md5-plus": "1.0.3",
+    "gulp-notify": "3.2.0",
+    "gulp-plumber": "1.2.0",
+    "gulp-postcss": "8.0.0",
+    "gulp-rename": "1.4.0",
+    "gulp-sass": "4.1.0",
+    "gulp-sort": "2.0.0",
+    "gulp-sourcemaps": "2.6.4",
+    "gulp.spritesmith": "6.9.0",
+    "postcss-url": "8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pocky9744/clone-study.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

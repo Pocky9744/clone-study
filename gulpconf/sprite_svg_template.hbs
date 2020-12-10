@@ -1,0 +1,21 @@
+// Sprites Map
+$sp_svg_{{spriteSheetName}}: (
+	type: 'svg',
+	ratio: {{sprite_ratio}},
+	name: 'sp_{{spriteSheetName}}',
+	width: {{spriteWidth}}px,
+	height: {{spriteHeight}}px,
+	image: '{{{baseName}}}.svg',
+	image_png: '{{{baseName}}}.png',
+	padding_x: {{padding.left}},
+	padding_y: {{padding.top}},
+	sprites: (
+	{{#shapes}}
+		{{name}}: (
+			offset-x: {{position.absolute.x}}px,
+			offset-y: {{position.absolute.y}}px,
+			width: {{width.inner}}px,
+			height: {{height.inner}}px,
+		),
+	{{/shapes}})
+);
