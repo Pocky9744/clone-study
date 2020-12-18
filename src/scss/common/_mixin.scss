@@ -1,0 +1,139 @@
+@charset "utf-8";
+//공통 컬렉션 이미지 경로 셋팅 변수
+$isCommon: false !default;
+$map_list: ()!default;
+$svg_map_list: ()!default;
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+// 화면대응 비율
+$ratio: 2;
+@function str-replace($string, $search, $replace:'') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+// Map deep getter
+// @param {Map} $map
+// @param {Arglist} $keys
+// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+// Sprite Getter
+// @param {String} 폴더명
+@mixin get-sprite($sprite-map) {
+    $type: map-get($sprite-map, type);
+    $ratio: map-get($sprite-map, ratio);
+    $map_width: map-get($sprite-map, width) / $ratio;
+    $map_height: map-get($sprite-map, height) / $ratio;
+
+    // 개별 css(sp_xxx.scss)
+    $image: map-get($sprite-map, image);
+    $charAt: str-index($image, 'img');
+    $total: str-length($image);
+    $imgPath: '../' + str-slice($image, $charAt, $total);
+
+    // 공통 css(import_xxx.scss)
+    @if $isCommon{
+        $imgPath: str-replace($image, 'src/', '../../');
+    }
+
+    display: inline-block;
+    overflow: hidden;
+    color: transparent;
+    white-space: nowrap;
+    @if($type == 'svg') {
+        $image_png: map-get($sprite-map, image_png);
+        $imgPath_png: '../' + str-slice($image_png, $charAt, $total);
+        $map_padding_x: map-get($sprite-map, padding_x) / $ratio;
+        $map_padding_y: map-get($sprite-map, padding_y) / $ratio;
+
+        @if $isCommon{
+            $imgPath_png: str-replace($image_png, 'src/', '../../');
+        }
+        //background: url(#{$imgPath_png}) 0 0 no-repeat;
+        //background-image: linear-gradient(transparent, transparent), url(#{$imgPath});
+        background: url("#{$imgPath}") 0 0 no-repeat;
+    }@else {
+        background: url("#{$imgPath}") 0 0 no-repeat;
+    }
+    background-size: ceil($map_width) ceil($map_height);
+}
+// Sprite Getter
+// @param {String} 파일명
+// @param {String} 폴더명
+@mixin get-icon-sprite($filename, $sprite-map) {
+    $type: map-get($sprite-map, type);
+    $ratio: map-get($sprite-map, ratio);
+    $offset-x: map-deep-get($sprite-map, 'sprites', $filename, 'offset-x') / $ratio;
+    $offset-y: map-deep-get($sprite-map, 'sprites', $filename, 'offset-y') / $ratio;
+    $width: map-deep-get($sprite-map, 'sprites', $filename, 'width') / $ratio;
+    $height: map-deep-get($sprite-map, 'sprites', $filename, 'height') / $ratio;
+    $map_padding_x: '';
+    $map_padding_y: '';
+
+    width: ceil($width);
+    height: ceil($height);
+
+    @if ($type == 'svg') {
+        $map_padding_x: map-get($sprite-map, padding_x) / $ratio;
+        $map_padding_y: map-get($sprite-map, padding_y) / $ratio;
+        background-position: floor($offset-x - $map_padding_x) floor($offset-y - $map_padding_y);
+    } @else {
+        background-position: floor($offset-x) floor($offset-y);
+    }
+}
+//한줄말줄임
+@mixin ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+//여러줄 말줄임
+@mixin line-ellipsis($line-height, $line-clamp){
+    display:block;
+    display:-webkit-box;
+    overflow:hidden;
+    max-height:$line-height * $line-clamp;
+    -webkit-line-clamp:$line-clamp;
+    -webkit-box-orient:vertical;
+    line-height:$line-height;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+//플롯 해제
+@mixin clear{
+    content:'';
+    display:block;
+    clear:both;
+}
+//마스크
+@mixin mask{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+//line-clamp 와 max-height 설정
+@mixin max-height($line-height, $line-clamp){
+	max-height:$line-height * $line-clamp;
+	-webkit-line-clamp: $line-clamp;
+}
+
+//다크모드
+@mixin theme-dark {
+    @media (prefers-color-scheme: winnnnner) {//prefers-color-scheme: dark
+        @content
+    }
+}

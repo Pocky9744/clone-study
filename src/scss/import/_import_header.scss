@@ -1,0 +1,72 @@
+$G-gnbH: 56px;//gnb높이
+
+.header_gnb{
+    position: relative;
+    height: $G-gnbH;
+    padding: 0 16px;
+    line-height: $G-gnbH;
+    border-bottom: 1px solid #ddd;
+    .top_menu_area{
+        position: absolute;
+        top: 0;
+        left: 16px;
+        bottom: 0;
+        font-size: 0;
+
+        .btn_menu{
+            display: inline-block;
+            padding: 8px;
+            line-height: 24px;
+            vertical-align: middle;
+            .icon_menu{
+                width: 24px;
+                height: 24px;
+                fill: #606060;
+                vertical-align: top;
+            }
+        }
+        .link_home{
+            display: inline-block;
+            padding: 8px;
+            width: 80px;
+            line-height: 24px;
+            vertical-align: middle;
+            .icon_youtube{
+                vertical-align: top;
+            }
+        }
+        .country_code{
+            display: inline-block;
+            margin-top: 8px;
+            line-height: 24px;
+            font-size: 10px;
+            vertical-align: top;
+        }
+    }
+    .btn_area{
+        position: absolute;
+        top: 0;
+        right: 16px;
+        bottom: 0;
+        font-size: 0;
+        [class*=btn_]{
+            display: inline-block;
+            padding: 8px;
+            line-height: 24px;
+            vertical-align: middle;
+            .svg_style{
+                width: 24px;
+                height: 24px;
+                fill: #606060;
+                vertical-align: top;
+            }
+        }
+        .btn_user{
+            line-height: 24px;
+            .user_thumb{
+                overflow: hidden;
+                border-radius: 50%;
+            }
+        }
+    }
+}

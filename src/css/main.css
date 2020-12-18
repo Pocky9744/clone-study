@@ -1,0 +1,186 @@
+/* common */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, audio, video {
+	margin: 0;
+	padding: 0;
+}
+
+body, input, textarea, select, table, button, code {
+	font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+	font-size: 1.6rem;
+	line-height: 2rem;
+}
+
+html[data-useragent*='iphone'] input, html[data-useragent*='iphone'] textarea {
+	outline: 0;
+}
+
+html {
+	font-size: 10px;
+	line-height: 10px;
+}
+
+body {
+	position: relative;
+	-webkit-text-size-adjust: none;
+	color: #000;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+img {
+	vertical-align: middle;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+i, em, address, cite, dfn {
+	font-style: normal;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table caption {
+	display: none !important;
+}
+
+.elss {
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.blind {
+	overflow: hidden !important;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	clip: rect(0 0 0 0) !important;
+}
+
+#u_skip {
+	position: relative;
+	width: 100%;
+	z-index: 5995;
+}
+
+#u_skip a {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	width: auto;
+	padding: 0 10px;
+	border: 1px solid #4ec53d;
+	background-color: #000;
+	color: #fff;
+	line-height: 38px;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+#u_skip a:active, #u_skip a:focus, #content .skip:hover, #content .skip:focus, #content .skip:active {
+	top: 60px;
+	text-decoration: none;
+	opacity: 1;
+}
+
+.a ::-webkit-scrollbar, .s ::-webkit-scrollbar {
+	display: none;
+}
+
+.header_gnb {
+	position: relative;
+	height: 56px;
+	padding: 0 16px;
+	line-height: 56px;
+	border-bottom: 1px solid #ddd;
+}
+
+.header_gnb .top_menu_area {
+	position: absolute;
+	top: 0;
+	left: 16px;
+	bottom: 0;
+	font-size: 0;
+}
+
+.header_gnb .top_menu_area .btn_menu {
+	display: inline-block;
+	padding: 8px;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.header_gnb .top_menu_area .btn_menu .icon_menu {
+	width: 24px;
+	height: 24px;
+	fill: #606060;
+	vertical-align: top;
+}
+
+.header_gnb .top_menu_area .link_home {
+	display: inline-block;
+	padding: 8px;
+	width: 80px;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.header_gnb .top_menu_area .link_home .icon_youtube {
+	vertical-align: top;
+}
+
+.header_gnb .top_menu_area .country_code {
+	display: inline-block;
+	margin-top: 8px;
+	line-height: 24px;
+	font-size: 10px;
+	vertical-align: top;
+}
+
+.header_gnb .btn_area {
+	position: absolute;
+	top: 0;
+	right: 16px;
+	bottom: 0;
+	font-size: 0;
+}
+
+.header_gnb .btn_area [class*=btn_] {
+	display: inline-block;
+	padding: 8px;
+	line-height: 24px;
+	vertical-align: middle;
+}
+
+.header_gnb .btn_area [class*=btn_] .svg_style {
+	width: 24px;
+	height: 24px;
+	fill: #606060;
+	vertical-align: top;
+}
+
+.header_gnb .btn_area .btn_user {
+	line-height: 24px;
+}
+
+.header_gnb .btn_area .btn_user .user_thumb {
+	overflow: hidden;
+	border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
