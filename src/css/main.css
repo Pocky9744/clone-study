@@ -153,6 +153,60 @@ table caption {
 	vertical-align: top;
 }
 
+.header_gnb .search_area {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+.header_gnb .search_area form {
+	flex: 1;
+	display: flex;
+}
+
+.header_gnb .search_area .input_bx {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	height: 24px;
+	padding: 2px 6px;
+	border: 1px solid #ddd;
+}
+
+.header_gnb .search_area .input_bx .bx_inner {
+	flex: 1;
+}
+
+.header_gnb .search_area .input_bx .bx_inner .input {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.header_gnb .search_area .input_bx .btn_keyboard {
+	flex: 0 1 auto;
+	width: 19px;
+	padding: 0 2px;
+}
+
+.header_gnb .search_area .btn_search {
+	flex: 0 1 auto;
+	width: 65px;
+	margin-left: -1px;
+	border: 1px solid #ddd;
+}
+
+.header_gnb .search_area .btn_search .icon_submit_search {
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+}
+
 .header_gnb .btn_area {
 	position: absolute;
 	top: 0;
