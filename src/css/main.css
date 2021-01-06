@@ -206,6 +206,39 @@ table caption {
 	vertical-align: top;
 }
 
+.header_gnb .search_area .records {
+	position: absolute;
+	top: 66px;
+	left: 0;
+	right: 0;
+	border: 1px solid #ababab;
+	line-height: 40px;
+}
+
+.header_gnb .search_area .records .bx {
+	position: relative;
+}
+
+.header_gnb .search_area .records .bx:hover {
+	background-color: #f0f0f0;
+}
+
+.header_gnb .search_area .records .item {
+	display: block;
+	margin-right: 68px;
+	padding: 0 15px;
+	font-size: 20px;
+}
+
+.header_gnb .search_area .records .btn_del {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0 20px;
+	font-size: 16px;
+}
+
 .header_gnb .btn_area {
 	position: absolute;
 	top: 0;
