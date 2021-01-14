@@ -122,11 +122,53 @@ $G-gnbH: 56px;//gnb높이
         right: 16px;
         bottom: 0;
         font-size: 0;
-        [class*=btn_]{
+        .group_btn{
+            position: relative;
             display: inline-block;
+            vertical-align: middle;
+            .ly_menu{
+                position: absolute;
+                top: $G-gnbH;
+                right: 0;
+                background-color: #fff;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                .item{
+                    padding: 5px 0;
+                    &.type_bd{
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    }
+                }
+                .menu_link{
+                    display: block;
+                    padding: 0 36px 0 16px;
+                    font-size: 14px;
+                    line-height: 47px;
+                    color: #030303;
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.05);
+                    }
+                }
+                .svg_style{
+                    display: inline-block;
+                    margin-right: 16px;
+                    vertical-align: top;
+                    width: 24px;
+                    height: 24px;
+                    vertical-align: -7px;
+                }
+
+                .txt{
+                    
+                }
+                &.type_info{
+                    width: 219px;
+                }
+            }
+        }
+        [class*=btn_]{
+            display: block;
             padding: 8px;
             line-height: 24px;
-            vertical-align: middle;
             .svg_style{
                 width: 24px;
                 height: 24px;
