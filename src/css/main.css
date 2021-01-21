@@ -315,4 +315,33 @@ table caption {
 	overflow: hidden;
 	border-radius: 50%;
 }
+
+.lnb {
+	width: 72px;
+	padding-top: 5px;
+}
+
+.lnb .menu_link {
+	display: block;
+	padding: 15px 0;
+	text-align: center;
+}
+
+.lnb .menu_link .svg_style {
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	fill: grey;
+}
+
+.lnb .menu_link:hover .svg_style, .lnb .menu_link[aria-selected=true] .svg_style {
+	fill: red;
+}
+
+.lnb .menu_link .txt {
+	padding-top: 6px;
+	font-size: 10px;
+	line-height: 14px;
+}
 /*# sourceMappingURL=main.css.map */

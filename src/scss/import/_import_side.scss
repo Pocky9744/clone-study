@@ -1,0 +1,27 @@
+.lnb{
+    width: 72px;
+    padding-top: 5px;
+    .menu_link{
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        .svg_style{
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 0 auto;
+            fill: grey;
+        }
+        &:hover,
+        &[aria-selected=true]{
+            .svg_style{
+                fill: red;
+            }
+        }
+        .txt{
+            padding-top: 6px;
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}
