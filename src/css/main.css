@@ -103,6 +103,10 @@ table caption {
 	display: none;
 }
 
+.main_pack {
+	overflow: hidden;
+}
+
 .header_gnb {
 	position: relative;
 	height: 56px;
@@ -317,6 +321,7 @@ table caption {
 }
 
 .lnb {
+	float: left;
 	width: 72px;
 	padding-top: 5px;
 }
@@ -343,5 +348,68 @@ table caption {
 	padding-top: 6px;
 	font-size: 10px;
 	line-height: 14px;
+}
+
+.banner_wrap {
+	padding: 32px 24px;
+}
+
+.banner_wrap .title_area .img {
+	width: 320px;
+	height: auto;
+	vertical-align: top;
+}
+
+.banner_wrap .dsc_area {
+	display: block;
+	margin-top: 10px;
+	font-size: 26px;
+	line-height: 30px;
+	color: #131313;
+}
+
+.banner_wrap {
+	position: relative;
+	padding: 32px 24px;
+	height: 200px;
+}
+
+.banner_wrap .title_area .img {
+	width: 320px;
+	height: auto;
+	vertical-align: top;
+}
+
+.banner_wrap .dsc_area {
+	display: block;
+	margin-top: 10px;
+	font-size: 26px;
+	line-height: 30px;
+	color: #131313;
+}
+
+.banner_wrap .free_link {
+	position: absolute;
+	left: 24px;
+	bottom: 32px;
+	padding: 0 16px;
+	border: 1px solid #065fd4;
+	font-size: 14px;
+	line-height: 39px;
+	color: #065fd4;
+	-ms-flex-item-align: end;
+}
+
+.banner_wrap .btn_close {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.banner_wrap .btn_close .icon_close {
+	width: 24px;
+	height: 24px;
+	fill: #333;
+	vertical-align: top;
 }
 /*# sourceMappingURL=main.css.map */

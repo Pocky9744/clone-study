@@ -4,5 +4,50 @@
 @import "./common/sprite_maps";
 
 @import "./common/base";  		 //리셋
+@import "./import/import_common";  		 //공통
 @import "./import/import_header"; //헤더
 @import "./import/import_side"; //사이드
+
+
+
+.banner_wrap{
+    position: relative;
+    padding: 32px 24px;
+    height: 200px;
+    .title_area{
+        .img{
+            width: 320px;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+    .dsc_area{
+        display: block;
+        margin-top: 10px;
+        font-size: 26px;
+        line-height: 30px;
+        color: #131313;
+    }
+    .free_link{
+        position: absolute;
+        left: 24px;
+        bottom: 32px;
+        padding: 0 16px;
+        border: 1px solid #065fd4;
+        font-size: 14px;
+        line-height: 39px;
+        color: #065fd4;
+        -ms-flex-item-align: end;
+    }
+    .btn_close{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        .icon_close{
+            width: 24px;
+            height: 24px;
+            fill: #333;
+            vertical-align: top;
+        }
+    }
+}
